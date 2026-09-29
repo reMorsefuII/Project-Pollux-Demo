@@ -1,0 +1,177 @@
+body {
+    color: #ffffff;
+    min-height: 100vh;
+    background: linear-gradient(
+        to bottom,
+        #000000,
+        #030e22
+    );
+    padding:1%;
+    background-repeat: no-repeat;
+    font-family: Verdana, sans-serif;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+p {
+    max-width: 50%;
+    font-size: 20px;
+    margin-inline: auto;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+input {
+    font-size: 12px;
+    font-weight: bold;
+    color:#ddd;
+    background: #050535;
+    padding: 8px 10px;
+    border: 3px solid #ccc;
+    border-radius: 10px;
+
+}
+
+input::placeholder {
+    color:#888;
+}
+
+button {
+    background: #050535;
+    font-weight: bold;
+    border: 3px solid #ccc;
+    border-radius: 10px;
+    padding: 8px 10px;
+    color:#ddd;
+    cursor: pointer;
+}
+
+.glow-text {
+    list-style-position: inside;
+    transition: text-shadow 0.4s ease-in-out; 
+}
+
+.glow-text:hover {
+    text-shadow:
+0 0 35px #ffffcc;
+}
+
+.title-banner {
+    width: 750px;
+    padding-bottom: 15px;
+    transition: filter 0.4s ease; 
+}
+
+.title-banner:hover {
+    filter:
+    drop-shadow(0 0 20px #11141d)
+    drop-shadow(0 0 30px #11141d)
+    drop-shadow(0 0 35px #11141d);
+}
+.display-img {
+    padding-bottom: 15px;
+    transition: filter 0.4s ease; 
+}
+
+.display-img:hover {
+    filter:
+    drop-shadow(0 0 10px #11141d)
+    drop-shadow(0 0 20px #11141d)
+    drop-shadow(0 0 25px #11141d);
+}
+
+#twins:hover {
+    filter:
+    drop-shadow(0 0 10px #1e1119)
+    drop-shadow(0 0 20px #1e1119)
+    drop-shadow(0 0 25px #1e1119);
+}
+
+#container {
+    width: 768px;
+    height: 768px;
+    margin: 0 auto;
+    position: relative;
+}
+
+#container .bg {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.sign {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    margin: -50px;
+    z-index: 1; /*ZIndex = rendered infront/behind other objects*/
+    filter:
+    drop-shadow(0 0 7px #fffff4)
+    drop-shadow(0 0 8px #fffff4)
+    drop-shadow(0 0 9px #fffff4);
+    transition: filter 0.4s ease; 
+}
+
+.sign:hover {
+    filter:
+    drop-shadow(0 0 7px #fffff4)
+    drop-shadow(0 0 8px #fffff4)
+    drop-shadow(0 0 9px #fffff4)
+    drop-shadow(0 0 15px #fffff4)
+    drop-shadow(0 0 20px #fffff4);
+}
+
+#sign_indicator {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 250px;
+    height: 250px;
+    margin: -125px;
+    z-index: 2;
+}
+
+.sign_icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.45s ease;
+}
+
+#pokemon {
+    width: 50%;
+}
+
+.sign_icon.visible { /*If has classes sign-icon AND visible*/
+    opacity: 0.8;
+}
+ /*Copied STRAIGHT from my other project*/
+pre, .code-block {
+  white-space: pre-wrap;
+  font-family: Consolas, Monaco, monospace;
+  font-size: 14px;
+  padding: 12px;
+  border-radius: 4px;
+  text-align: left;
+  overflow-x: auto;
+  margin: 15px 0;
+  max-width: 30%;
+  margin-inline: auto;
+}
