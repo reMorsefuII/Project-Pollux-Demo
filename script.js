@@ -14,6 +14,8 @@ const answers = {
     "pisces" : "cfb858c8bc39bb9b4badb01a58b2c385bc61c320c75a0e6440e179bb1e51b527"
 };
 
+const order = ["aries", "taurus", "gemini", "cancer", "leo", "virgo", "libra", "scorpio", "sagittarius", "capricorn", "aquarius", "pisces"]
+
 const submit = document.getElementById("submit_button")
 const textbox = document.getElementById("input_box")
 
@@ -26,7 +28,7 @@ submit.addEventListener('click', () => {
         if (pagename in progress) {
             console.log("Metapuzzle piece found")
             progress[pagename] = textbox.value.toLowerCase();
-            localStorage.setItem("progress", JSON.stringify(progress));
+            localStorage.setItem("progress", JSON.stringify(progress, order));
         };
         window.location.href = `${textbox.value.toLowerCase()}.html`
     }; 
